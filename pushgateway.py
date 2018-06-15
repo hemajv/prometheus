@@ -1,8 +1,6 @@
 #Test code for exporting metrics to localhost push gateway
 from prometheus_client import CollectorRegistry, Gauge, push_to_gateway, Summary, Histogram, Counter, start_http_server
 import os
-import time
-import random
 
 
 registry = CollectorRegistry()
@@ -15,7 +13,7 @@ for i in range(10):
 	if packages_added==True:
 		_PACKAGES_NEW.inc()
 
-push_gateway = os.getenv('PROMETHEUS_PUSH_GATEWAY', '127.0.0.1:9091')
+push_gateway = os.getenv('PROMETHEUS_PUSH_GATEWAY', 'localhost:9091')
 if push_gateway:
 	try:
 		push_to_gateway(push_gateway, job='package-releases', registry=registry)
