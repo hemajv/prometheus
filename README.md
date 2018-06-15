@@ -14,4 +14,7 @@
 ```
    	./pushgateway
 ```
-3. Check if the port is activated through your browser
+3. Check if the port is activated via your browser. The default port for the push gateway is 9091.
+```
+     https://localhost:9091
+```
