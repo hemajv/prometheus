@@ -1,5 +1,8 @@
 ### Requirements
 1. Install python prometheus_client
+```
+     pip install prometheus_client
+```
 2. Install the push gateway from https://prometheus.io/download/#pushgateway
 
 ### How to run the push gateway:
