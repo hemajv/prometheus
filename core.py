@@ -68,6 +68,8 @@ def extract_image(image_name: str, timeout: int = None, *, registry_credentials:
         result = run_analyzers(rootfs_path)
         result['layers'] = layers
         
+        _METRIC_ANALYZER_JOB.inc()
+        
         #push_to_gateway('127.0.0.1:9091',job='job-runtime', registry=registry)
         push_gateway = os.getenv('PROMETHEUS_PUSH_GATEWAY', '127.0.0.1:9091')
         
