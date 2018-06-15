@@ -2,6 +2,7 @@ from prometheus_client import Summary, start_http_server, Counter, Gauge, Histog
 import time
 import random
 
+start_http_server(8000)
 #Counter
 c = Counter('my_failures_total', 'Total failures')
 c.inc()
