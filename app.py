@@ -13,7 +13,7 @@ for i in range(10):
 	if packages_added==True:
 		_PACKAGES_NEW.inc()
 
-push_gateway = os.getenv('PROMETHEUS_PUSH_GATEWAY', 'localhost:9091')
+push_gateway = os.getenv('PROMETHEUS_PUSH_GATEWAY', '0.0.0.0:9091')
 if push_gateway:
 	try:
 		push_to_gateway(push_gateway, job='package-releases', registry=registry)
