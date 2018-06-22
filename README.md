@@ -5,6 +5,11 @@
 ```
 2. Install the push gateway from https://prometheus.io/download/#pushgateway
 
+### Docker image for pushgateway:
+```
+     prom/pushgateway
+```
+
 ### How to run the push gateway:
 1. Change to the directory where your pushgateway is installed
 ```
